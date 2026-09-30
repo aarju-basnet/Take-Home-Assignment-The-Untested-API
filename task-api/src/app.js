@@ -5,6 +5,12 @@ const app = express();
 
 app.use(express.json());
 
+// NEW: root route so opening the base URL returns a response instead of
+// Express's default "Cannot GET /". It only returns a simple message.
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Task API is running' });
+});
+
 // NEW: health check route. It only returns a simple "ok" so a hosting
 // service (like Render) or I can quickly check that the server is running.
 // It does not touch any task data.
