@@ -3,6 +3,8 @@
 ## Test coverage
 
 43 tests pass (unit tests for `taskService.js` and Supertest tests for all routes).
+###  tests pass  (43 passing)
+![Test coverage report](/screenshots/metrics.png)
 
 | Metric | Coverage |
 |---|---|
